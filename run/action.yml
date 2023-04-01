@@ -1,0 +1,14 @@
+name: here it is
+description: here is some garbage
+
+inputs: 
+  garbage: 
+    description: this is a type
+    required: true
+  sector:
+    description: some garbage
+    required: false
+
+runs:
+  using: "node16"
+  main: "index.js"
