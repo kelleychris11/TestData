@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: xml-check
-        uses: kelleychris11/ActionTest/CheckXmlJs@main
+        uses: ChrisKelleyOrg/ActionTest/CheckXmlJs@main
         with: 
           token: ${{ secrets.TOKEN }}
           filePath: "abc.xml"
