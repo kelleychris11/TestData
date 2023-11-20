@@ -1,0 +1,15 @@
+name: xml
+
+on:
+  workflow_dispatch:
+
+jobs:
+  do-it:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: xml-check
+        uses: kelleychris11/ActionsTest@main
+        with: 
+          filePath: "abc.xml"
+
