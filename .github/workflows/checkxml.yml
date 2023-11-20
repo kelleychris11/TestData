@@ -11,5 +11,6 @@ jobs:
       - name: xml-check
         uses: kelleychris11/ActionTest/CheckXmlJs@main
         with: 
+          token: ${{ secrets.TOKEN }}
           filePath: "abc.xml"
 
