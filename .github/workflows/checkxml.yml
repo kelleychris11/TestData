@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: xml-check
-        uses: kelleychris11/ActionsTest@main
+        uses: kelleychris11/ActionTest@main
         with: 
           filePath: "abc.xml"
 
