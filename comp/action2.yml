@@ -17,6 +17,11 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: echo
+      shell: pwsh
+      run: |
+        $a = "a"
+        echo $a
     - name: Set Actions Path
       shell: pwsh
       run: |
@@ -24,14 +29,7 @@ runs:
         echo $ACTION_PATH >> $GITHUB_PATH
       env:
         ACTION_PATH: ${{github.action_path}}
-    - name: Set Path
-      shell: pwsh
-      run: |
-        echo ${{github.action_path}} >> $MY_PATH
-    - name: Use Path
-      shell: pwsh
-      run: echo $MY_PATH
-      
+
     - name: Current Dir
       id: cur-dir
       uses: actions/github-script@v6
