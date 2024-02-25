@@ -21,10 +21,22 @@ runs:
         ACTION_PATH: ${{github.action_path}}
       run: echo ACTIONS_PATH >> $GITHUB_PATH
 
-    - name: Set Configs
-      id: set-config
+    - name: Current Dir
+      id: cur-dir
       uses: actions/github-script@v6
       with:
         script: |
           console.log("Current Directory");
           console.log(process.cwd());
+    - name: Set Configs
+      id: set-configs
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const file = 'config/data.json';
+          const data = fs.readFileSync(file);
+
+          console.log(data);
+          core.setOutput('data', data);
+              

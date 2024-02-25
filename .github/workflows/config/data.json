@@ -1,0 +1,128 @@
+{
+    "main": {
+      "build": {
+        "ult": {
+          "on": true,
+          "dir": "vgr/dev",
+          "cmd": "sconz.bat"
+        },
+        "qlab": {
+          "on": true,
+          "dir": "vgr/dev",
+          "cmd": "qz.bat"
+        },
+        "fc": {
+          "on": true,
+          "dir": "",
+          "cmd": "fc.bat"
+        }
+      },
+      "vault": {
+        "ult": {
+          "on": true,
+          "dir": "a/b/c",
+          "cmd": "c.bat"
+        }
+      },
+      "pcTest": {
+        "sost": {
+          "on": true,
+          "build": {
+            "dir": "a/b/c",
+            "cmd": "sost.exe"
+          },
+          "run": {
+            "dir": "a/b/c",
+            "cmd": "run-sost.exe"
+          }
+        },
+        "staticAnalysis": {
+          "cmd": "s-a.exe"
+        }
+      }
+    },
+    "feature": {
+      "build": {
+        "ult": {
+          "on": true,
+          "dir": "vgr/dev",
+          "cmd": "sconz.bat"
+        },
+        "qlab": {
+          "on": true,
+          "dir": "vgr/dev",
+          "cmd": "qz.bat"
+        },
+        "fc": {
+          "on": true,
+          "dir": "",
+          "cmd": "fc.bat"
+        }
+      },
+      "vault": {
+        "ult": {
+          "on": true,
+          "dir": "a/b/c",
+          "cmd": "c.bat"
+        }
+      },
+      "pcTest": {
+        "sost": {
+          "on": true,
+          "build": {
+            "dir": "a/b/c",
+            "cmd": "sost.exe"
+          },
+          "run": {
+            "dir": "a/b/c",
+            "cmd": "run-sost.exe"
+          }
+        },
+        "staticAnalysis": {
+          "cmd": "s-a.exe"
+        }
+      }
+    },
+    "other-feature": {
+      "build": {
+        "ult": {
+          "on": true,
+          "dir": "vgr/dev",
+          "cmd": "sconz.bat"
+        },
+        "qlab": {
+          "on": true,
+          "dir": "vgr/dev",
+          "cmd": "qz.bat"
+        },
+        "fc": {
+          "on": true,
+          "dir": "",
+          "cmd": "fc.bat"
+        }
+      },
+      "vault": {
+        "ult": {
+          "on": true,
+          "dir": "a/b/c",
+          "cmd": "c.bat"
+        }
+      },
+      "pcTest": {
+        "sost": {
+          "on": true,
+          "build": {
+            "dir": "a/b/c",
+            "cmd": "sost.exe"
+          },
+          "run": {
+            "dir": "a/b/c",
+            "cmd": "run-sost.exe"
+          }
+        },
+        "staticAnalysis": {
+          "cmd": "s-a.exe"
+        }
+      }
+    }
+  }
