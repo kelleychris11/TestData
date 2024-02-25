@@ -4,12 +4,15 @@ description: test
 
 inputs:
   value-a:
-    defalt: "a"
+    description: The thing
+    default: "a"
   value-b:
+    description: The other thing
     default: "b" 
 
 outputs:
   value-output:
+    description: the output
     value: ${{steps.outputs.set-config}}
 
 runs:
