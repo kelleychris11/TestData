@@ -1,11 +1,17 @@
+name: Composite Action Test
+description: Testing composite actions
+
 inputs:
   value-a:
-    defalt: "a"
+    description: "the thing"
+    default: "a"
   value-b:
+    description: "the other thing"
     default: "b" 
 
 outputs:
   value-output:
+    description: "the output"
     value: ${{steps.outputs.set-config}}
 
 runs:
@@ -24,6 +30,7 @@ runs:
         script: |
           console.log("Current Directory");
           console.log(process.cwd());
+
     - name: Set Configs
       id: set-configs
       uses: actions/github-script@v6
