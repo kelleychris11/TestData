@@ -19,10 +19,10 @@ runs:
   using: "composite"
   steps:
     - name: Set Actions Path
-      shell: cmd
+      shell: pwsh
       env:
         ACTION_PATH: ${{github.action_path}}
-      run: echo ACTIONS_PATH >> $GITHUB_PATH
+      run: echo $ACTIONS_PATH >> $GITHUB_PATH
 
     - name: Set Configs
       id: set-config
