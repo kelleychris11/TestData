@@ -19,9 +19,9 @@ runs:
   steps:
     - name: Set Actions Path
       shell: pwsh
+      run: echo $ACTION_PATH >> $GITHUB_PATH
       env:
         ACTION_PATH: ${{github.action_path}}
-      run: echo $ACTION_PATH >> $GITHUB_PATH
 
     - name: Current Dir
       id: cur-dir
@@ -30,9 +30,11 @@ runs:
         script: |
           console.log("Current Directory");
           console.log(process.cwd());
+
     - name: GitHub Path
       shell: pwsh
       run: echo $GITHUB_PATH
+
     - name: Set Configs
       id: set-configs
       uses: actions/github-script@v6
