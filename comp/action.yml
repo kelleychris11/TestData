@@ -1,6 +1,6 @@
 name: composite action test
 
-description: test
+description: test the thing
 
 inputs:
   value-a:
