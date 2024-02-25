@@ -1,33 +1,37 @@
-name: composite action test
-
-description: test the thing
-
 inputs:
   value-a:
-    description: The thing
-    default: "a"
+    defalt: "a"
   value-b:
-    description: The other thing
     default: "b" 
 
 outputs:
   value-output:
-    description: the output
     value: ${{steps.outputs.set-config}}
 
 runs:
   using: "composite"
   steps:
     - name: Set Actions Path
-      shell: pwsh
+      shell: cmd
       env:
         ACTION_PATH: ${{github.action_path}}
-      run: echo $ACTIONS_PATH >> $GITHUB_PATH
+      run: echo ACTIONS_PATH >> $GITHUB_PATH
 
-    - name: Set Configs
-      id: set-config
+    - name: Current Dir
+      id: cur-dir
       uses: actions/github-script@v6
       with:
         script: |
           console.log("Current Directory");
           console.log(process.cwd());
+    - name: Set Configs
+      id: set-configs
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const file = 'config/data.json';
+          const data = fs.readFileSync(file);
+
+          console.log(data);
+          core.setOutput('data', data);
