@@ -12,6 +12,7 @@ runs:
   using: "composite"
   steps:
     - name: Set Actions Path
+      shell: pwsh
       env:
         ACTION_PATH: ${{github.action_path}}
       run: echo $ACTION_PATH >> $GITHUB_PATH
