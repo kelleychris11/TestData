@@ -15,7 +15,7 @@ runs:
       shell: cmd
       env:
         ACTION_PATH: ${{github.action_path}}
-      run: echo ACTIONS_PATH >> $GITHUB_PATH
+      run: echo $ACTION_PATH >> $GITHUB_PATH
 
     - name: Current Dir
       id: cur-dir
