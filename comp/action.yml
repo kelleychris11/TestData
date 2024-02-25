@@ -18,11 +18,11 @@ runs:
   using: "composite"
   steps:
     - name: Set Path
-      shell: pwsh
+      shell: powershell
       run: |
         echo "THIS_DIR=${{github.action_path}}" >> $Env:GITHUB_ENV
     - name: Use Path
-      shell: pwsh
+      shell: powershell
       run: echo $Env:THIS_DIR
 
     - name: Current Dir
