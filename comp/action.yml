@@ -1,0 +1,30 @@
+name: composite action test
+
+description: test
+
+inputs:
+  value-a:
+    defalt: "a"
+  value-b:
+    default: "b" 
+
+outputs:
+  value-output:
+    value: ${{steps.outputs.set-config}}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set Actions Path
+      shell: cmd
+      env:
+        ACTION_PATH: ${{github.action_path}}
+      run: echo ACTIONS_PATH >> $GITHUB_PATH
+
+    - name: Set Configs
+      id: set-config
+      uses: actions/github-script@v6
+      with:
+        script: |
+          console.log("Current Directory");
+          console.log(process.cwd());
