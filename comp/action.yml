@@ -39,7 +39,7 @@ runs:
       with:
         script: |
           const fs = require('fs');
-          const file = "${{github.action_path}}/config/data.json";
+          const file = "${{env.THIS_DIR}}/config/data.json";
           const data = fs.readFileSync(file);
 
           console.log(data);
